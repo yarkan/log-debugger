@@ -13,7 +13,7 @@ class Content
     {
         $dateTime = new \DateTime('now');
         $header = $dateTime->format('Y-m-d\TH:i:s' . substr((string)microtime(false), 1, 8) . 'O');
-        $header .= self::separator('=');
+        $header .= self::separator('-', 47, null);
 
         if ($trace->isClass()) {
             $header .= sprintf("\nNAMESPACE : %s::%s(LINE : %s);", $trace->class(), $trace->method(), $trace->line());
@@ -39,8 +39,17 @@ class Content
         return self::header($trace, implode(self::separator(), $content));
     }
 
-    private static function separator(string $separator = '-', int $quantity = 80): string
-    {
-        return sprintf("\n%s\n", str_pad('', $quantity, $separator, STR_PAD_RIGHT));
+    private static function separator(
+        string $separator = '-',
+        int $quantity = 80,
+        ?string $leftBreak = "\n",
+        ?string $rightBreak = "\n"
+    ): string {
+        return sprintf(
+            "%s%s%s",
+            $leftBreak,
+            str_pad('', $quantity, $separator, STR_PAD_RIGHT),
+            $rightBreak
+        );
     }
 }
