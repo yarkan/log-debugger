@@ -1,7 +1,7 @@
 {
-  "name": "ldg",
+  "name": "yarkan/ldg",
   "license": "GNU V3",
-  "type": "project",
+  "type": "library",
   "description": "A single local debug",
   "require": {
     "php": "^7.4"
