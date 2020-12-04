@@ -13,7 +13,7 @@ class Write
 {
     public static function local(): Structure
     {
-        return Structure::build(File::build('dir'), BackTrace::build(1))->name('Debug');
+        return Structure::build(File::build('/tmp/log'), BackTrace::build(1))->name('Debug');
     }
 
     public static function aws(): Structure
