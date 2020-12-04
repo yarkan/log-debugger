@@ -1,0 +1,11 @@
+.idea/
+.vendor/
+.composer/
+
+/vendor/
+/composer.lock
+/symfony.lock
+/.vscode
+###> phpunit/phpunit ###
+.phpunit.result.cache
+###< phpunit/phpunit ###
