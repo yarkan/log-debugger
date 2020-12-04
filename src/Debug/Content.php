@@ -13,7 +13,7 @@ class Content
     {
         $dateTime = new \DateTime('now');
         $header = $dateTime->format('Y-m-d\TH:i:s' . substr((string)microtime(false), 1, 8) . 'O');
-        $header .= self::separator('-', 47, null);
+        $header .= self::separator('-', 48, null, null);
 
         if ($trace->isClass()) {
             $header .= sprintf("\nNAMESPACE : %s::%s(LINE : %s);", $trace->class(), $trace->method(), $trace->line());
