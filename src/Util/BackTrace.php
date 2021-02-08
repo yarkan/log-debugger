@@ -27,10 +27,11 @@ class BackTrace
     {
         $this->file = (string)($trace[$index]['file'] ?? null);
         $this->line = (string)($trace[$index]['line'] ?? null);
+        $this->class = (string)($trace[$index + 1]['class'] ?? null);
+        $this->method = (string)($trace[$index + 1]['function'] ?? null);
 
-        if (isset($trace[1])) {
-            $this->class = (string)($trace[$index + 1]['class'] ?? null);
-            $this->method = (string)($trace[$index + 1]['function'] ?? null);
+        if (!empty($trace[$index - 1])) {
+            unset($trace[$index - 1]);
         }
 
         $this->collection = $trace;
