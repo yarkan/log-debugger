@@ -3,6 +3,7 @@
   "license": "GNU V3",
   "type": "library",
   "description": "A single local debug",
+  "homepage": "https://github.com/yarkan/ldg",
   "require": {
     "php": "^7.4"
   },
