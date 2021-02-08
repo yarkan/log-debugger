@@ -1,5 +1,5 @@
 {
-  "name": "yarkan/ldg",
+  "name": "yarkan/log-debugger",
   "license": "GNU V3",
   "type": "library",
   "description": "A single local debug",
