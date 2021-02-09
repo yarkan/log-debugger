@@ -7,8 +7,8 @@ namespace LDG\Logger;
 class File implements LoggerInterface
 {
     private const MODE = 'a+';
-    private const DIR_PERMISSION = 0775;
-    private const FILE_PERMISSION = 0664;
+    private const DIR_PERMISSION = 0777; //0775
+    private const FILE_PERMISSION = 0777; //0664
 
     private string $dir;
 
