@@ -63,39 +63,39 @@ class Structure
         $this->process(ParseMapping::LINE, []);
     }
 
-    public function line(): void
+    public function line(...$args): void
     {
-        $this->process(ParseMapping::LINE, func_get_args());
+        $this->process(ParseMapping::LINE, $args);
     }
 
-    public function json(): void
+    public function json(...$args): void
     {
-        $this->process(ParseMapping::JSON, func_get_args());
+        $this->process(ParseMapping::JSON, $args);
     }
 
-    public function impl(): void
+    public function impl(...$args): void
     {
-        $this->process(ParseMapping::IMPLEMENT, func_get_args());
+        $this->process(ParseMapping::IMPLEMENT, $args);
     }
 
-    public function error(): void
+    public function error(...$args): void
     {
-        $this->process(ParseMapping::ERROR, func_get_args());
+        $this->process(ParseMapping::ERROR, $args);
     }
 
-    public function exception(): void
+    public function exception(...$args): void
     {
-        $this->process(ParseMapping::EXCEPTION, func_get_args());
+        $this->process(ParseMapping::EXCEPTION, $args);
     }
 
-    public function print(): void
+    public function print(...$args): void
     {
-        $this->process(ParseMapping::PRINT_R, func_get_args());
+        $this->process(ParseMapping::PRINT_R, $args);
     }
 
-    public function dump(): void
+    public function dump(...$args): void
     {
-        $this->process(ParseMapping::DUMP, func_get_args());
+        $this->process(ParseMapping::DUMP, $args);
     }
 
     private function process(string $type, array $arguments): void
